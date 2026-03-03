@@ -1,0 +1,75 @@
+.bannerWrapper {
+    background-color: var(--primary-crimson);
+    color: white;
+    padding: 12px 0;
+    overflow: hidden;
+}
+
+.bannerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content {
+    flex: 1;
+    overflow: hidden;
+    margin: 0 16px;
+    position: relative;
+}
+
+.tickerContainer {
+    white-space: nowrap;
+}
+
+.tickerText {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    animation: scrollLeft 15s linear infinite;
+}
+
+.tickerText span {
+    display: inline-block;
+}
+
+.divider {
+    margin: 0 24px;
+    opacity: 0.6;
+}
+
+.navButton {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.navButton:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+@keyframes scrollLeft {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@media (max-width: 768px) {
+    .tickerText {
+        font-size: 13px;
+    }
+}

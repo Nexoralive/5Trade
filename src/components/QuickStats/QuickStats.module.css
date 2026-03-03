@@ -1,0 +1,63 @@
+.statsWrapper {
+    background-color: var(--surface-card);
+    border-top: 1px solid var(--surface-card-hover);
+    border-bottom: 1px solid var(--surface-card-hover);
+    overflow: hidden;
+    white-space: nowrap;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.statsTrack {
+    display: inline-flex;
+    gap: 32px;
+    animation: scroll 30s linear infinite;
+    padding: 0 16px;
+}
+
+.statItem {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.statName {
+    color: var(--text-secondary);
+}
+
+.statValue {
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+.statChangeUp {
+    color: var(--status-success);
+}
+
+.statChangeDown {
+    color: var(--status-danger);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 768px) {
+    .statsWrapper {
+        height: 36px;
+    }
+
+    .statItem {
+        font-size: 12px;
+    }
+}

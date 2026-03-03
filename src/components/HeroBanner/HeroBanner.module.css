@@ -1,0 +1,110 @@
+.heroBanner {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(135deg, #111111 0%, #2A080C 100%);
+    color: white;
+}
+
+.slidesContainer {
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.slideContent {
+    max-width: 600px;
+}
+
+.title {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    line-height: 1.2;
+    background: linear-gradient(to right, #FFFFFF, #FFD1D6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #E0E0E0;
+    margin-bottom: 24px;
+}
+
+.ctaButton {
+    background-color: var(--accent-crimson);
+    color: white;
+    padding: 12px 24px;
+    border-radius: var(--radius-btn);
+    font-weight: 700;
+    font-size: 16px;
+    transition: transform 0.2s;
+    box-shadow: 0 4px 12px rgba(232, 25, 44, 0.4);
+}
+
+.ctaButton:hover {
+    transform: translateY(-2px);
+    background-color: #FF2A3D;
+}
+
+.indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.activeDot {
+    background-color: var(--accent-crimson);
+    width: 24px;
+    border-radius: 4px;
+}
+
+@keyframes glow {
+    from {
+        filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.2));
+    }
+
+    to {
+        filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.6));
+    }
+}
+
+@media (max-width: 768px) {
+    .heroBanner {
+        height: 240px;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+}

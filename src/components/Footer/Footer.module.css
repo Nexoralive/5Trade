@@ -1,0 +1,204 @@
+/* ────────────────────────────────────────────
+   Footer  –  clean, mobile-first
+──────────────────────────────────────────── */
+
+.footer {
+    background: #F9FAFB;
+    border-top: 1px solid #E5E7EB;
+    padding: 36px 0 24px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+/* ── Top row ── */
+.topRow {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-bottom: 24px;
+}
+
+.logoImg {
+    height: 30px;
+    width: auto;
+    object-fit: contain;
+}
+
+.importantLinks {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px 12px;
+}
+
+.linksLabel {
+    font-size: 12px;
+    font-weight: 700;
+    color: #6B7280;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-right: 4px;
+}
+
+.regLink {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--primary);
+    text-decoration: none;
+    padding: 3px 10px;
+    background: var(--primary-soft);
+    border-radius: 6px;
+    border: 1px solid rgba(211, 47, 47, 0.18);
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.regLink:hover {
+    background: var(--primary);
+    color: #fff;
+}
+
+/* ── Divider ── */
+.divider {
+    height: 1px;
+    background: #E5E7EB;
+    margin: 24px 0;
+}
+
+/* ── About ── */
+.aboutSection {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.aboutTitle {
+    font-size: 14px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.aboutText {
+    font-size: 13px;
+    color: #6B7280;
+    line-height: 1.65;
+}
+
+/* ── Legal ── */
+.legalSection {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.legalTitle {
+    font-size: 13px;
+    font-weight: 700;
+    color: #111827;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.disclaimers {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 80px;
+    overflow: hidden;
+    position: relative;
+    transition: max-height 0.4s ease;
+}
+
+.disclaimers::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 36px;
+    background: linear-gradient(to bottom, transparent, #F9FAFB);
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.disclaimers.expanded {
+    max-height: 2000px;
+}
+
+.disclaimers.expanded::after {
+    opacity: 0;
+}
+
+.disclaimer {
+    font-size: 11px;
+    color: #9CA3AF;
+    line-height: 1.6;
+}
+
+.readMoreBtn {
+    align-self: flex-start;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--primary);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: opacity 0.2s;
+}
+
+.readMoreBtn:hover {
+    opacity: 0.75;
+}
+
+/* ── Bottom bar ── */
+.bottomBar {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.copyright {
+    font-size: 12px;
+    color: #9CA3AF;
+}
+
+.bottomLinks {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.bottomLinks a {
+    font-size: 12px;
+    color: #6B7280;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.bottomLinks a:hover {
+    color: var(--primary);
+}
+
+/* ── Desktop ── */
+@media (min-width: 769px) {
+    .topRow {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .bottomBar {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .disclaimers {
+        max-height: 60px;
+    }
+}

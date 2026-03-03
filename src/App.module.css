@@ -1,0 +1,38 @@
+.appContainer {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.mainContent {
+    flex: 1;
+}
+
+.marketSection {
+    padding: 36px 0;
+    background-color: var(--bg-white);
+}
+
+/* Desktop only - shown on >= 769px, hidden on mobile */
+.desktopOnly {
+    display: block;
+}
+
+/* Mobile only - hidden on desktop */
+.mobileOnly {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .marketSection {
+        padding: 20px 0;
+    }
+
+    .desktopOnly {
+        display: none;
+    }
+
+    .mobileOnly {
+        display: block;
+    }
+}

@@ -1,0 +1,130 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 0 0 8px;
+}
+
+.categorySection {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    animation: sectionIn 0.4s ease both;
+}
+
+.categorySection:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.categorySection:nth-child(2) {
+    animation-delay: 0.06s;
+}
+
+.categorySection:nth-child(3) {
+    animation-delay: 0.12s;
+}
+
+.categorySection:nth-child(4) {
+    animation-delay: 0.18s;
+}
+
+.categorySection:nth-child(5) {
+    animation-delay: 0.24s;
+}
+
+.categorySection:nth-child(6) {
+    animation-delay: 0.30s;
+}
+
+@keyframes sectionIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.rowHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 var(--mobile-padding);
+}
+
+.rowTitle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.categoryIcon {
+    font-size: 18px;
+    line-height: 1;
+}
+
+.categoryName {
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--text-primary);
+    font-family: var(--font-heading);
+    letter-spacing: -0.3px;
+}
+
+.viewAllBtn {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--primary-crimson);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px 10px;
+    border-radius: var(--radius-pill);
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.viewAllBtn:hover {
+    background-color: rgba(192, 25, 44, 0.06);
+    transform: translateX(2px);
+}
+
+.viewAllBtn svg {
+    transition: transform 0.2s ease;
+}
+
+.viewAllBtn:hover svg {
+    transform: translateX(3px);
+}
+
+/* Horizontal scroll row - shows exactly 3 cards, hints at 4th */
+.scrollTrack {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 4px var(--mobile-padding) 8px;
+    /* Hint that more cards exist */
+    padding-right: calc(var(--mobile-padding) + 24px);
+}
+
+.scrollTrack::-webkit-scrollbar {
+    display: none;
+}
+
+.cardWrapper {
+    /* exactly 3 cards fit: (viewport - 2×side-pad - 2×gaps) / 3 */
+    flex: 0 0 calc((100vw - var(--mobile-padding) * 2 - 10px * 2) / 3);
+    min-width: 112px;
+    max-width: 152px;
+    scroll-snap-align: start;
+}

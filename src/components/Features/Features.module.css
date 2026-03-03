@@ -1,0 +1,194 @@
+/* ────────────────────────────────────────────
+   Features  –  numbered grid, unique layout
+──────────────────────────────────────────── */
+
+.section {
+    padding: 56px 0;
+    background: #F9FAFB;
+    border-top: 1px solid #F3F4F6;
+}
+
+/* ── Header: left headline + right subtitle ── */
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+.eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: var(--primary);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: 800;
+    color: #111827;
+    letter-spacing: -0.5px;
+    line-height: 1.18;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #6B7280;
+    line-height: 1.65;
+    max-width: 280px;
+    align-self: flex-start;
+}
+
+/* ── 3×2 grid ── */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+/* ── Card ── */
+.card {
+    background: #fff;
+    border: 1px solid #E5E7EB;
+    border-radius: 14px;
+    padding: 20px 18px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.22s ease, box-shadow 0.22s ease, transform 0.22s ease;
+    animation: cardIn 0.4s ease both;
+}
+
+@keyframes cardIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card:hover {
+    border-color: rgba(211, 47, 47, 0.2);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+    transform: translateY(-2px);
+}
+
+/* ── Top row: number + tag ── */
+.cardTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+
+.num {
+    font-size: 28px;
+    font-weight: 900;
+    color: #F3F4F6;
+    letter-spacing: -1px;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+    /* Transitions to crimson on hover */
+    transition: color 0.2s ease;
+}
+
+.card:hover .num {
+    color: rgba(211, 47, 47, 0.12);
+}
+
+.tag {
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    color: var(--primary);
+    background: #FEE2E2;
+    padding: 2px 7px;
+    border-radius: 4px;
+}
+
+/* ── Content ── */
+.cardTitle {
+    font-size: 14px;
+    font-weight: 800;
+    color: #111827;
+    line-height: 1.3;
+}
+
+.cardDesc {
+    font-size: 12.5px;
+    color: #6B7280;
+    line-height: 1.6;
+    flex: 1;
+}
+
+/* ── Bottom accent line ── */
+.cardLine {
+    height: 2px;
+    width: 32px;
+    background: var(--primary);
+    border-radius: 2px;
+    margin-top: 4px;
+    opacity: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.card:hover .cardLine {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+/* ── Desktop: 3 columns, side-by-side header ── */
+@media (min-width: 769px) {
+    .section {
+        padding: 64px 0;
+    }
+
+    .header {
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+        margin-bottom: 48px;
+    }
+
+    .title {
+        font-size: 36px;
+    }
+
+    .subtitle {
+        font-size: 15px;
+        max-width: 320px;
+        text-align: right;
+        align-self: flex-end;
+    }
+
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+    }
+
+    .num {
+        font-size: 36px;
+    }
+
+    .cardTitle {
+        font-size: 15px;
+    }
+
+    .cardDesc {
+        font-size: 13px;
+    }
+
+    .card {
+        padding: 22px 20px 18px;
+    }
+}

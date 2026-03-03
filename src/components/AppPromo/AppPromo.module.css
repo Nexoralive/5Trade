@@ -1,0 +1,391 @@
+/* ────────────────────────────────────────────
+   AppPromo  –  clean, no-emoji, no-glass, mobile-first
+──────────────────────────────────────────── */
+
+.section {
+    background: var(--bg-white);
+}
+
+/* ═══════════════════════════════════════════
+   1. Rating Banner  –  deep dark background
+═══════════════════════════════════════════ */
+.ratingBanner {
+    background: #FFF5F5;
+    padding: 36px 0 32px;
+    text-align: center;
+}
+
+.ratingEyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: var(--primary);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.ratingTitle {
+    font-size: 24px;
+    font-weight: 800;
+    color: #111827;
+    letter-spacing: -0.5px;
+    line-height: 1.22;
+    margin-bottom: 28px;
+}
+
+.ratingRow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    background: #fff;
+    border: 1.5px solid #E5E7EB;
+    border-radius: 12px;
+    padding: 12px 0;
+    margin-bottom: 0;
+    width: 100%;
+}
+
+.ratingCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    padding: 0 10px;
+    flex: 1;
+    min-width: 0;
+}
+
+.stars {
+    display: flex;
+    gap: 1px;
+}
+
+.ratingNum {
+    font-size: 20px;
+    font-weight: 800;
+    color: #111827;
+    line-height: 1;
+    letter-spacing: -0.5px;
+    white-space: nowrap;
+}
+
+.ratingStore {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    font-size: 10px;
+    font-weight: 600;
+    color: #6B7280;
+    white-space: nowrap;
+}
+
+.ratingDivider {
+    width: 1px;
+    height: 36px;
+    background: #E5E7EB;
+    flex-shrink: 0;
+}
+
+.statsRow {
+    display: none;
+    /* hidden — stats merged into ratingRow */
+}
+
+/* ═══════════════════════════════════════════
+   2. Invest Categories
+═══════════════════════════════════════════ */
+.investSection {
+    padding: 40px 0;
+    background: var(--bg-white);
+}
+
+.eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.sectionTitle {
+    font-size: 24px;
+    font-weight: 800;
+    color: #111827;
+    letter-spacing: -0.4px;
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.sectionSub {
+    font-size: 14px;
+    color: #6B7280;
+    text-align: center;
+    margin-top: -16px;
+    margin-bottom: 28px;
+}
+
+.categoryGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.categoryCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 18px 10px 14px;
+    background: #F9FAFB;
+    border: 1px solid #E5E7EB;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.categoryCard:hover {
+    border-color: rgba(211, 47, 47, 0.25);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+    transform: translateY(-2px);
+}
+
+.categoryIcon {
+    width: 32px;
+    height: 32px;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.categoryIcon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.categoryLabel {
+    font-size: 10.5px;
+    font-weight: 700;
+    color: #111827;
+    text-align: center;
+    line-height: 1.2;
+}
+
+/* ═══════════════════════════════════════════
+   3. Features
+═══════════════════════════════════════════ */
+.featuresSection {
+    padding: 40px 0;
+    background: #F9FAFB;
+}
+
+.featureList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 28px;
+}
+
+.featureItem {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 16px;
+    background: #fff;
+    border: 1px solid #E5E7EB;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.featureItem:hover {
+    border-color: rgba(211, 47, 47, 0.2);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+.featureIconWrap {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: #FEE2E2;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.featureIconWrap svg {
+    width: 22px;
+    height: 22px;
+}
+
+.featureTitle {
+    font-size: 14px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 3px;
+}
+
+.featureDesc {
+    font-size: 12.5px;
+    color: #6B7280;
+    line-height: 1.5;
+}
+
+.featureArrow {
+    margin-left: auto;
+    flex-shrink: 0;
+}
+
+/* ═══════════════════════════════════════════
+   4. Download CTA
+═══════════════════════════════════════════ */
+.downloadSection {
+    padding: 40px 0;
+    background: var(--primary);
+}
+
+.downloadInner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
+}
+
+.downloadEyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.downloadTitle {
+    font-size: 24px;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+}
+
+.downloadSub {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.65);
+    margin-top: 6px;
+}
+
+.downloadBtns {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 280px;
+}
+
+.storeBtn {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 13px 22px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1.5px solid rgba(255, 255, 255, 0.25);
+    border-radius: 12px;
+    color: #fff;
+    text-decoration: none;
+    transition: background 0.2s ease;
+    width: 100%;
+    justify-content: center;
+}
+
+.storeBtn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.storeBtn svg {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+}
+
+.storeLine1 {
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 500;
+}
+
+.storeLine2 {
+    font-size: 15px;
+    font-weight: 800;
+    color: #fff;
+}
+
+/* ═══════════════════════════════════════════
+   Desktop overrides
+═══════════════════════════════════════════ */
+@media (min-width: 769px) {
+    .ratingTitle {
+        font-size: 30px;
+    }
+
+    .ratingNum {
+        font-size: 30px;
+    }
+
+    .statIcon {
+        display: block;
+    }
+
+    .categoryGrid {
+        grid-template-columns: repeat(8, 1fr);
+        gap: 12px;
+    }
+
+    .categoryLabel {
+        font-size: 12px;
+    }
+
+    .featureList {
+        flex-direction: row;
+        gap: 14px;
+    }
+
+    .featureItem {
+        flex: 1;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .featureArrow {
+        display: none;
+    }
+
+    /* Desktop: download aligned horizontally, left-aligned text */
+    .downloadInner {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    .downloadBtns {
+        flex-direction: row;
+        width: auto;
+        max-width: none;
+    }
+
+    .storeBtn {
+        width: auto;
+        justify-content: flex-start;
+        min-width: 148px;
+    }
+
+    .downloadTitle {
+        font-size: 32px;
+    }
+}

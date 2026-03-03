@@ -1,0 +1,163 @@
+/* ────────────────────────────────────────────
+   FAQ Section  –  premium accordion
+──────────────────────────────────────────── */
+
+.section {
+    padding: 56px 0 64px;
+    background: #fff;
+}
+
+.eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.title {
+    font-size: 26px;
+    font-weight: 800;
+    color: #111827;
+    letter-spacing: -0.4px;
+    text-align: center;
+    margin-bottom: 6px;
+}
+
+.sub {
+    font-size: 14px;
+    color: #9CA3AF;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* ── List ── */
+.list {
+    max-width: 680px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ── Item ── */
+.item {
+    border-bottom: 1px solid #F3F4F6;
+    animation: itemIn 0.35s ease both;
+}
+
+.item:first-child {
+    border-top: 1px solid #F3F4F6;
+}
+
+@keyframes itemIn {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ── Question button ── */
+.question {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 20px 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+}
+
+/* Default: black question */
+.qText {
+    font-size: 15px;
+    font-weight: 600;
+    color: #111827;
+    line-height: 1.4;
+    transition: color 0.2s ease;
+}
+
+/* When open: question turns crimson */
+.qOpen {
+    color: var(--primary);
+}
+
+/* ── Chevron ── */
+.chevronWrap {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border: 1.5px solid #E5E7EB;
+    color: #9CA3AF;
+    transition: border-color 0.25s ease, color 0.25s ease, background 0.25s ease;
+}
+
+.chevronOpen {
+    border-color: var(--primary);
+    color: var(--primary);
+    background: #FEE2E2;
+}
+
+.chevronIcon {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.chevronRotated {
+    transform: rotate(180deg);
+}
+
+/* ── Answer – smooth CSS grid expand ── */
+.answerWrap {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.answerOpen {
+    grid-template-rows: 1fr;
+}
+
+.answerInner {
+    overflow: hidden;
+}
+
+/* Answer text: black */
+.answer {
+    font-size: 14px;
+    color: #374151;
+    line-height: 1.75;
+    padding-bottom: 20px;
+    padding-right: 44px;
+}
+
+/* ── Desktop ── */
+@media (min-width: 769px) {
+    .title {
+        font-size: 32px;
+    }
+
+    .qText {
+        font-size: 16px;
+    }
+
+    .answer {
+        font-size: 14.5px;
+    }
+
+    .section {
+        padding: 64px 0 72px;
+    }
+}
