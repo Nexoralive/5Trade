@@ -52,8 +52,8 @@
 }
 
 .badgeDown {
-    background: rgba(225, 29, 72, 0.1);
-    color: #e11d48;
+    background: rgba(189, 30, 62, 0.1);
+    color: #bd1e3e;
 }
 
 /* ── Logo + Name ── */
@@ -119,7 +119,7 @@
 }
 
 .priceDown {
-    color: #e11d48;
+    color: #bd1e3e;
 }
 
 /* ── Sparkline ── */
@@ -156,7 +156,7 @@
 }
 
 .btnSell {
-    background: #e11d48;
+    background: #bd1e3e;
 }
 
 .btnBuy {

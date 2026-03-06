@@ -22,7 +22,7 @@
     left: 10%;
     width: 60vw;
     height: 60vw;
-    background: radial-gradient(circle, rgba(225, 29, 72, 0.05) 0%, rgba(248, 250, 252, 0) 70%);
+    background: radial-gradient(circle, rgba(189, 30, 62, 0.05) 0%, rgba(248, 250, 252, 0) 70%);
     border-radius: 50%;
     pointer-events: none;
 }
@@ -74,7 +74,7 @@
     margin-bottom: 20px;
     line-height: 1.15;
     letter-spacing: -0.02em;
-    background: linear-gradient(135deg, #0f172a 0%, #e11d48 100%);
+    background: linear-gradient(135deg, #0f172a 0%, #bd1e3e 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -117,15 +117,15 @@
 }
 
 .checkIcon {
-    color: #e11d48;
+    color: #bd1e3e;
     flex-shrink: 0;
-    background: rgba(225, 29, 72, 0.1);
+    background: rgba(189, 30, 62, 0.1);
     border-radius: 50%;
     padding: 4px;
 }
 
 .ctaButton {
-    background-color: #e11d48;
+    background-color: #bd1e3e;
     color: white;
     padding: 14px 32px;
     border-radius: 100px;
@@ -134,15 +134,15 @@
     transition: all 0.3s ease;
     border: none;
     cursor: pointer;
-    box-shadow: 0 8px 20px rgba(225, 29, 72, 0.3);
+    box-shadow: 0 8px 20px rgba(189, 30, 62, 0.3);
     text-decoration: none;
     display: inline-block;
 }
 
 .ctaButton:hover {
     transform: translateY(-2px);
-    background-color: #be123c;
-    box-shadow: 0 10px 24px rgba(225, 29, 72, 0.4);
+    background-color: #a01934;
+    box-shadow: 0 10px 24px rgba(189, 30, 62, 0.4);
 }
 
 .indicators {
@@ -167,7 +167,7 @@
 }
 
 .activeDot {
-    background-color: #e11d48;
+    background-color: #bd1e3e;
     width: 32px;
 }
 

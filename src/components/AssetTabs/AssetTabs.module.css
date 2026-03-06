@@ -39,9 +39,9 @@
 }
 
 .tab.active {
-    background-color: #e11d48;
+    background-color: #bd1e3e;
     color: #ffffff;
-    box-shadow: 0 4px 12px rgba(225, 29, 72, 0.25);
+    box-shadow: 0 4px 12px rgba(189, 30, 62, 0.25);
 }
 
 @media (max-width: 768px) {

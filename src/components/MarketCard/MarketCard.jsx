@@ -35,7 +35,7 @@ const MarketCard = memo(({ asset, assetData }) => {
   }).format(price || 0);
 
   const chartData = history.map((val, idx) => ({ value: val, index: idx }));
-  const sparkColor = isUp ? '#15803D' : '#e11d48';
+  const sparkColor = isUp ? '#15803D' : '#bd1e3e';
 
   return (
     <div className={styles.card}>

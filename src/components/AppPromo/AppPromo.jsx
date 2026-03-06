@@ -92,7 +92,7 @@ const AppPromo = () => (
     <div className={styles.ratingBanner}>
       <div className="container">
         <p className={styles.ratingEyebrow}>TOP RATED INVESTING APP</p>
-        <h2 className={styles.ratingTitle}>India's Most Trusted<br />Investment Platform</h2>
+        <h2 className={styles.ratingTitle}>India's Most Trusted<br />Trading Platform</h2>
 
         <div className={styles.ratingRow}>
           <div className={styles.ratingCard}>
@@ -155,7 +155,7 @@ const AppPromo = () => (
     <div className={styles.investSection}>
       <div className="container">
         <p className={styles.eyebrow}>ALL IN ONE PLATFORM</p>
-        <h2 className={styles.sectionTitle}>Diversify and Invest Across</h2>
+        <h2 className={styles.sectionTitle}>Diversify and Trade Across</h2>
         <div className={styles.categoryGrid}>
           {INVEST_CATEGORIES.map(cat => (
             <div key={cat.label} className={styles.categoryCard}>
