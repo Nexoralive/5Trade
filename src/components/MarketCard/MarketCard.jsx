@@ -4,22 +4,16 @@ import { LineChart, Line, ResponsiveContainer, YAxis } from 'recharts';
 
 const MarketCard = memo(({ asset, assetData }) => {
   const prevPriceRef = useRef(assetData?.price);
-  const [priceDir, setPriceDir] = useState('');   // 'up' | 'down' | ''
-
   useEffect(() => {
     if (
       assetData?.updatedAt &&
       assetData.price !== prevPriceRef.current &&
       prevPriceRef.current !== undefined
     ) {
-      // Subtle text colour flash — NO scale/transform so cards don't jitter
-      setPriceDir(assetData.direction);
       prevPriceRef.current = assetData.price;
-      const t = setTimeout(() => setPriceDir(''), 700);
-      return () => clearTimeout(t);
     }
     prevPriceRef.current = assetData?.price;
-  }, [assetData?.updatedAt, assetData?.price, assetData?.direction]);
+  }, [assetData?.updatedAt, assetData?.price]);
 
   if (!assetData) {
     return (
@@ -41,15 +35,10 @@ const MarketCard = memo(({ asset, assetData }) => {
   }).format(price || 0);
 
   const chartData = history.map((val, idx) => ({ value: val, index: idx }));
-  const sparkColor = isUp ? '#16A34A' : '#DC2626';
-
-  // flash class for subtle border tint only (no transform)
-  let flashBorder = '';
-  if (priceDir === 'up') flashBorder = styles.flashUp;
-  if (priceDir === 'down') flashBorder = styles.flashDown;
+  const sparkColor = isUp ? '#15803D' : '#e11d48';
 
   return (
-    <div className={`${styles.card} ${flashBorder}`}>
+    <div className={styles.card}>
       {/* badge */}
       <div className={styles.topRow}>
         <span className={`${styles.badge} ${isUp ? styles.badgeUp : styles.badgeDown}`}>
@@ -59,7 +48,13 @@ const MarketCard = memo(({ asset, assetData }) => {
 
       {/* logo + name */}
       <div className={styles.logoRow}>
-        <div className={styles.circleLogo}>{asset.name.charAt(0)}</div>
+        <div className={styles.circleLogo}>
+          {asset.image ? (
+            <img src={asset.image} alt={asset.name} style={{ width: '100%', height: '100%', borderRadius: '50%', objectFit: 'cover' }} />
+          ) : (
+            asset.name.charAt(0)
+          )}
+        </div>
         <div className={styles.nameBlock}>
           <span className={styles.assetName}>{asset.name}</span>
           <span className={styles.ticker}>{asset.ticker}</span>

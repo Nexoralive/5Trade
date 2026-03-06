@@ -3,14 +3,14 @@
 ──────────────────────────────────────────── */
 
 .card {
-    background: var(--surface-card);
-    border-radius: 12px;
-    padding: 10px;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 12px;
     display: flex;
     flex-direction: column;
-    gap: 6px;
-    border: 1px solid #E5E7EB;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+    gap: 8px;
+    border: 1px solid #f1f5f9;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.03);
     cursor: pointer;
     /* NO transform animation on the card itself – prevents flicker */
     transition: box-shadow 0.2s ease, border-color 0.25s ease, background 0.25s ease;
@@ -21,18 +21,8 @@
 }
 
 .card:hover {
-    background: #FFFFFF;
-    border-color: rgba(211, 47, 47, 0.2);
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
-}
-
-/* subtle flash – border colour only, zero transform/opacity change */
-.flashUp {
-    border-color: rgba(22, 163, 74, 0.45) !important;
-}
-
-.flashDown {
-    border-color: rgba(220, 38, 38, 0.45) !important;
+    border-color: rgba(15, 23, 42, 0.1);
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
 }
 
 /* Skeleton */
@@ -58,12 +48,12 @@
 
 .badgeUp {
     background: #DCFCE7;
-    color: #16A34A;
+    color: #15803D;
 }
 
 .badgeDown {
-    background: #FEE2E2;
-    color: #DC2626;
+    background: rgba(225, 29, 72, 0.1);
+    color: #e11d48;
 }
 
 /* ── Logo + Name ── */
@@ -95,9 +85,9 @@
 }
 
 .assetName {
-    font-size: 10.5px;
+    font-size: 11px;
     font-weight: 700;
-    color: #111827;
+    color: #0f172a;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -125,11 +115,11 @@
 }
 
 .priceUp {
-    color: #16A34A;
+    color: #15803D;
 }
 
 .priceDown {
-    color: #DC2626;
+    color: #e11d48;
 }
 
 /* ── Sparkline ── */
@@ -146,9 +136,9 @@
 
 .btn {
     flex: 1;
-    height: 22px;
-    border-radius: 5px;
-    font-size: 9px;
+    height: 24px;
+    border-radius: 6px;
+    font-size: 10px;
     font-weight: 700;
     color: #fff;
     display: flex;
@@ -166,19 +156,19 @@
 }
 
 .btnSell {
-    background: #DC2626;
+    background: #e11d48;
 }
 
 .btnBuy {
-    background: #16A34A;
+    background: #15803D;
 }
 
 /* ── Desktop overrides ── */
 @media (min-width: 769px) {
     .card {
-        padding: 14px;
-        gap: 9px;
-        border-radius: 14px;
+        padding: 16px;
+        gap: 12px;
+        border-radius: 20px;
     }
 
     .circleLogo {
@@ -189,7 +179,7 @@
     }
 
     .assetName {
-        font-size: 13px;
+        font-size: 14px;
     }
 
     .ticker {
@@ -203,7 +193,7 @@
     }
 
     .price {
-        font-size: 20px;
+        font-size: 22px;
         letter-spacing: -0.5px;
     }
 

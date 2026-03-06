@@ -109,9 +109,9 @@ export const useFinnhubWS = (symbols) => {
             return () => clearInterval(mockInterval);
         }
 
-        // ─── Finnhub REST polling for ws/rest type symbols ───
+        // ─── Finnhub REST polling for finnhub type symbols ───
         // (WebSocket is unreliable on free tier, REST works consistently)
-        const finnhubSymbols = symbols.filter(s => s.type === 'ws' || s.type === 'rest');
+        const finnhubSymbols = symbols.filter(s => s.type === 'finnhub');
         let finnhubInterval;
         if (finnhubSymbols.length > 0) {
             const fetchFinnhub = async () => {
@@ -160,8 +160,8 @@ export const useFinnhubWS = (symbols) => {
                 const next = { ...prev };
                 let changed = false;
                 symbols.forEach(asset => {
-                    if (asset.type === 'nse') return; // NSE has its own fetcher
-                    if (!blockedSymbols.current.has(asset.symbol)) return;
+                    const needsMocking = asset.type === 'binance' || blockedSymbols.current.has(asset.symbol);
+                    if (!needsMocking) return;
                     const entry = next[asset.symbol];
                     if (!entry) return;
                     changed = true;

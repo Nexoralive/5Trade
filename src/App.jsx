@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import Header from './components/Header/Header';
 import HeroBanner from './components/HeroBanner/HeroBanner';
-import QuickStats from './components/QuickStats/QuickStats';
+
 import AssetTabs from './components/AssetTabs/AssetTabs';
 import MarketGrid from './components/MarketGrid/MarketGrid';
 import MobileMarketSection from './components/MarketGrid/MobileMarketSection';
 import ChampionshipBanner from './components/ChampionshipBanner/ChampionshipBanner';
-import Features from './components/Features/Features';
+import AccountCTA from './components/AccountCTA/AccountCTA';
+
 import AppPromo from './components/AppPromo/AppPromo';
 import FAQ from './components/FAQ/FAQ';
 import Footer from './components/Footer/Footer';
@@ -20,23 +21,26 @@ function App() {
       <Header />
       <main className={styles.mainContent}>
         <HeroBanner />
-        <QuickStats />
+
         <ChampionshipBanner />
 
-        {/* Desktop: tab-filtered market grid */}
-        <section className={`${styles.marketSection} ${styles.desktopOnly}`}>
+        {/* Market Section (Desktop & Mobile) */}
+        <section className={styles.marketSection}>
           <div className="container">
             <AssetTabs activeTab={activeTab} setActiveTab={setActiveTab} />
-            <MarketGrid activeCategory={activeTab} />
+            
+            <div className={styles.desktopOnly}>
+              <MarketGrid activeCategory={activeTab} />
+            </div>
+          </div>
+          
+          <div className={styles.mobileOnly}>
+            <MobileMarketSection activeCategory={activeTab} />
           </div>
         </section>
 
-        {/* Mobile: all categories in horizontal scroll rows */}
-        <section className={`${styles.marketSection} ${styles.mobileOnly}`}>
-          <MobileMarketSection />
-        </section>
+        <AccountCTA />
 
-        <Features />
         <AppPromo />
         <FAQ />
       </main>

@@ -5,12 +5,12 @@ import { ASSETS } from '../../data/assets';
 import { useMarketData } from '../../hooks/MarketDataProvider';
 
 const CATEGORY_ICONS = {
-  'Indian Equities': '🇮🇳',
-  'Global Indices': '🌐',
-  'Forex Majors': '💱',
-  'Commodities': '🪙',
-  'US Equities': '🇺🇸',
-  'Crypto': '₿',
+  'Indian Equities': '',
+  'Global Indices': '',
+  'Forex Majors': '',
+  'Commodities': '',
+  'US Equities': '',
+  'Crypto': '',
 };
 
 const CATEGORIES = Object.keys(ASSETS);
@@ -22,7 +22,6 @@ const CategoryRow = ({ category, data }) => {
     <div className={styles.categorySection}>
       <div className={styles.rowHeader}>
         <div className={styles.rowTitle}>
-          <span className={styles.categoryIcon}>{CATEGORY_ICONS[category]}</span>
           <h3 className={styles.categoryName}>{category}</h3>
         </div>
         <button className={styles.viewAllBtn}>
@@ -44,14 +43,12 @@ const CategoryRow = ({ category, data }) => {
   );
 };
 
-const MobileMarketSection = () => {
+const MobileMarketSection = ({ activeCategory }) => {
   const { data } = useMarketData();
 
   return (
     <div className={styles.container}>
-      {CATEGORIES.map((category) => (
-        <CategoryRow key={category} category={category} data={data} />
-      ))}
+      {activeCategory && <CategoryRow category={activeCategory} data={data} />}
     </div>
   );
 };

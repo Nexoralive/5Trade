@@ -21,7 +21,6 @@ const AssetTabs = ({ activeTab, setActiveTab }) => {
             onClick={() => setActiveTab(tab)}
           >
             {tab}
-            {activeTab === tab && <div className={styles.activeIndicator} />}
           </button>
         ))}
       </div>

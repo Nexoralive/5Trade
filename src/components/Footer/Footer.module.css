@@ -1,12 +1,43 @@
-/* ────────────────────────────────────────────
-   Footer  –  clean, mobile-first
-──────────────────────────────────────────── */
+/* ── Go to Top ── */
+.goTopBtn {
+    position: fixed;
+    bottom: 24px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 16px rgba(225, 29, 72, 0.35);
+    opacity: 0;
+    transform: translateY(12px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease, background 0.2s ease;
+    z-index: 999;
+}
+
+.goTopBtn.goTopVisible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.goTopBtn:hover {
+    background: var(--primary-hover, #be123c);
+    transform: translateY(-3px);
+}
 
 .footer {
     background: #F9FAFB;
     border-top: 1px solid #E5E7EB;
-    padding: 36px 0 24px;
+    padding: 40px 0 24px;
 }
+
 
 .container {
     display: flex;
@@ -14,12 +45,21 @@
     gap: 0;
 }
 
-/* ── Top row ── */
-.topRow {
+/* ── Top section: columns ── */
+.topSection {
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    padding-bottom: 24px;
+    align-items: flex-start;
+    gap: 32px;
+    padding-bottom: 8px;
+}
+
+/* ── Brand col ── */
+.brandCol {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
 }
 
 .logoImg {
@@ -28,91 +68,107 @@
     object-fit: contain;
 }
 
-.importantLinks {
+.brandDesc {
+    font-size: 13px;
+    color: #6B7280;
+    line-height: 1.65;
+    max-width: 320px;
+}
+
+.socials {
+    display: flex;
+    gap: 10px;
+}
+
+.socialBtn {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: #fff;
+    border: 1.5px solid #E5E7EB;
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 8px 12px;
+    justify-content: center;
+    color: #374151;
+    text-decoration: none;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
-.linksLabel {
-    font-size: 12px;
-    font-weight: 700;
-    color: #6B7280;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-right: 4px;
+.socialBtn:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: #fff;
 }
 
-.regLink {
+/* ── Link columns ── */
+.linkCol {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.colTitle {
     font-size: 13px;
     font-weight: 700;
-    color: var(--primary);
-    text-decoration: none;
-    padding: 3px 10px;
-    background: var(--primary-soft);
-    border-radius: 6px;
-    border: 1px solid rgba(211, 47, 47, 0.18);
-    transition: background 0.2s ease, color 0.2s ease;
+    color: #111827;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
 }
 
-.regLink:hover {
-    background: var(--primary);
-    color: #fff;
+.linkList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.footLink {
+    font-size: 13.5px;
+    color: #6B7280;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    font-weight: 500;
+}
+
+.footLink:hover {
+    color: var(--primary);
 }
 
 /* ── Divider ── */
 .divider {
     height: 1px;
     background: #E5E7EB;
-    margin: 24px 0;
+    margin: 28px 0;
 }
 
-/* ── About ── */
-.aboutSection {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.aboutTitle {
-    font-size: 14px;
-    font-weight: 700;
-    color: #111827;
-}
-
-.aboutText {
-    font-size: 13px;
-    color: #6B7280;
-    line-height: 1.65;
-}
-
-/* ── Legal ── */
-.legalSection {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.legalTitle {
-    font-size: 13px;
-    font-weight: 700;
-    color: #111827;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-}
-
-.disclaimers {
+/* ── Risk Statement ── */
+.riskSection {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    max-height: 80px;
+}
+
+.riskTitle {
+    font-size: 12px;
+    font-weight: 700;
+    color: #374151;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.riskText {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-height: 56px;
     overflow: hidden;
     position: relative;
     transition: max-height 0.4s ease;
 }
 
-.disclaimers::after {
+.riskText::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -124,15 +180,15 @@
     transition: opacity 0.3s ease;
 }
 
-.disclaimers.expanded {
+.riskText.expanded {
     max-height: 2000px;
 }
 
-.disclaimers.expanded::after {
+.riskText.expanded::after {
     opacity: 0;
 }
 
-.disclaimer {
+.riskPara {
     font-size: 11px;
     color: #9CA3AF;
     line-height: 1.6;
@@ -186,10 +242,20 @@
 
 /* ── Desktop ── */
 @media (min-width: 769px) {
-    .topRow {
+    .topSection {
         flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
+        align-items: flex-start;
+        gap: 40px;
+    }
+
+    .brandCol {
+        flex: 2;
+        min-width: 0;
+    }
+
+    .linkCol {
+        flex: 1;
+        min-width: 0;
     }
 
     .bottomBar {
@@ -198,7 +264,7 @@
         align-items: center;
     }
 
-    .disclaimers {
-        max-height: 60px;
+    .riskText {
+        max-height: 44px;
     }
 }

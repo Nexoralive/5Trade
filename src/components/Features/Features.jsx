@@ -29,7 +29,7 @@ const FEATURES = [
   {
     num: '05',
     title: 'Zero Paperwork Onboarding',
-    desc: 'Open a complete demat + trading account in under 5 minutes — 100% digital, no branch visit required.',
+    desc: 'Open a complete trading account in under 5 minutes — 100% digital, no branch visit required.',
     tag: 'EASY',
   },
   {

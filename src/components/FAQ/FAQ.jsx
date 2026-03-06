@@ -3,30 +3,43 @@ import styles from './FAQ.module.css';
 
 const FAQS = [
   {
-    q: 'Is 5Trade safe and SEBI regulated?',
-    a: '5Trade Securities Pvt. Ltd. is registered with SEBI (INZ000305337) and is a member of NSE & BSE. Your investments are held in your own DEMAT account with CDSL — fully secure and protected.',
+    q: 'What is a high-leverage trading platform?',
+    a: 'A high-leverage trading platform allows traders to control large positions with a smaller capital investment. 5Trade offers leverage up to 500x, enabling greater exposure with less upfront cost.',
   },
   {
-    q: 'How do I open a 5Trade account?',
-    a: 'Opening an account takes under 5 minutes. Download the app, enter your mobile number, complete video KYC, and link your bank account. No branch visit, no paperwork.',
+    q: 'Is customer support available 24/7?',
+    a: 'Yes, 5Trade\'s customer support is available 24/7, including weekends and holidays. You can reach us anytime via live chat, email, or WhatsApp.',
   },
   {
-    q: 'What can I invest in on 5Trade?',
-    a: 'US Stocks, Indian Stocks, Mutual Funds, ETFs, IPOs, F&O, Fixed Deposits, and NPS — all from one single app.',
+    q: 'Can I deposit and withdraw funds at any time?',
+    a: 'Yes, 5Trade supports 24/7 deposits and withdrawals, so you can access your funds or add capital whenever you need.',
   },
   {
-    q: 'Are there any hidden charges?',
-    a: 'No hidden charges. Equity delivery trades are ₹0 brokerage. Intraday and F&O trades have a flat fee of ₹20 per executed order. Full fee schedule is on our website.',
+    q: 'How fast are the withdrawals processed?',
+    a: '5Trade provides some of the fastest withdrawal speeds in the industry. Most requests are processed within minutes, depending on the payment method and verification status.',
   },
   {
-    q: 'How do I withdraw my money?',
-    a: 'Withdrawals go directly to your linked bank account. Equity sale proceeds are available within T+1. Mutual fund redemptions settle in 1–3 business days.',
+    q: 'Are there any annual maintenance charges (AMC)?',
+    a: 'No, there are no annual maintenance charges or hidden fees on 5Trade. You can maintain your account at zero cost.',
   },
   {
-    q: 'Can I track my whole family\'s portfolio?',
-    a: 'Yes. 5Trade supports family account management — add investments for multiple family members and view everyone\'s net worth in one place, with full privacy controls.',
+    q: 'What does \'Zero Brokerage\' mean?',
+    a: 'Zero brokerage means you pay no commission on trades, allowing you to trade more often and keep more of your profits.',
+  },
+  {
+    q: 'What is the liquidation point for a trade?',
+    a: 'Your position will be automatically liquidated when your capital incurs a 70% loss, helping to minimize further losses in volatile market conditions.',
+  },
+  {
+    q: 'What is Negative Balance Protection (NBP)?',
+    a: '5Trade offers Negative Balance Protection — if your account balance drops below zero due to extreme market moves, we will automatically reset it to zero. You\'ll never owe more than your deposited amount.',
+  },
+  {
+    q: 'What payment methods are supported?',
+    a: '5Trade supports UPI, bank transfers, IMPS, and crypto wallets — all available 24/7 for deposits and withdrawals.',
   },
 ];
+
 
 const ChevronSVG = ({ className }) => (
   <svg

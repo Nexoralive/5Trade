@@ -47,6 +47,106 @@
     gap: 8px;
 }
 
+/* Navigation Styles */
+.desktopNav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.navLink {
+    text-decoration: none;
+    color: #4B5563;
+    font-weight: 500;
+    font-size: 15px;
+    transition: color 0.2s ease;
+}
+
+.navLink:hover {
+    color: var(--primary);
+}
+
+.desktopAuth {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.mobileMenuBtn {
+    display: none;
+}
+
+button.mobileCreateAccountBtn {
+    display: none;
+}
+
+/* Mobile Overlay Styles */
+.mobileOverlay {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    padding: 32px 24px;
+    transform: translateY(-100%) scale(0.98);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 99;
+    max-height: calc(100vh - 56px);
+    overflow-y: auto;
+    border-radius: 0 0 24px 24px;
+}
+
+.mobileOverlayOpen {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.mobileNav {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.mobileNavLink {
+    text-decoration: none;
+    color: #374151;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 12px 16px;
+    border-radius: 12px;
+    transition: all 0.2s ease;
+    background: transparent;
+}
+
+.mobileNavLink:hover {
+    background: rgba(0, 0, 0, 0.03);
+    color: #111827;
+    transform: translateX(4px);
+}
+
+.mobileAuthContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(0,0,0,0.06);
+}
+
+.mobileBtn {
+    width: 100%;
+    height: 48px;
+    font-size: 15px;
+    border-radius: 12px;
+}
+
 .btn {
     height: 32px;
     padding: 0 16px;
@@ -84,36 +184,39 @@
     background: var(--primary-soft);
 }
 
-.btnIconMobile {
-    display: none;
-}
-
 @media (max-width: 768px) {
     .header {
-        height: 50px;
+        height: 60px;
+    }
+
+    .desktopNav, .desktopAuth {
+        display: none;
+    }
+
+    .mobileMenuBtn {
+        display: flex;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #111827;
+        padding: 4px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    button.mobileCreateAccountBtn {
+        display: flex;
+        padding: 0 12px;
+        font-size: 13px;
+        height: 32px;
+        border-radius: 6px;
     }
 
     .logoImg {
         height: 28px;
     }
 
-    .btn {
-        padding: 0 12px;
-        font-size: 12px;
-        height: 30px;
-    }
-
-    .btnTextDesktop {
-        display: none;
-    }
-
-    .btnIconMobile {
-        display: block;
-    }
-
-    .btnOutline {
-        padding: 0;
-        width: 30px;
-        border-radius: 50%;
+    .mobileOverlay {
+        top: 60px;
     }
 }

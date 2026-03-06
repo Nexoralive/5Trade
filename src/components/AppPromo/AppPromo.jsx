@@ -32,102 +32,58 @@ const Icons = {
 
 const INVEST_CATEGORIES = [
   {
-    label: 'US Stocks',
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
-        <circle cx="12" cy="12" r="9"/><line x1="2" y1="12" x2="22" y2="12"/>
-        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-      </svg>
-    ),
-  },
-  {
     label: 'Indian Stocks',
     icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
       </svg>
     ),
   },
   {
-    label: 'Mutual Funds',
+    label: 'US Stocks',
     icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
-        <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="9"/>
+        <line x1="2" y1="12" x2="22" y2="12"/>
+        <path d="M12 3a15.3 15.3 0 0 1 4 9 15.3 15.3 0 0 1-4 9 15.3 15.3 0 0 1-4-9 15.3 15.3 0 0 1 4-9z"/>
       </svg>
     ),
   },
   {
-    label: 'F&O',
+    label: 'Forex',
     icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
-        <rect x="2" y="2" width="20" height="20" rx="3"/><path d="M8 12h8M12 8v8"/>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 1v22"/>
+        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
       </svg>
     ),
   },
   {
-    label: 'IPO',
+    label: 'Comex',
     icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
-        <path d="M5 12h14M12 5l7 7-7 7"/>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M3 3h18"/>
+        <path d="M3 9h18"/>
+        <path d="M3 15h18"/>
+        <path d="M3 21h18"/>
+        <path d="M9 3v18"/>
+        <path d="M15 3v18"/>
       </svg>
     ),
   },
   {
-    label: 'ETFs',
+    label: 'Crypto',
     icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
-        <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
-      </svg>
-    ),
-  },
-  {
-    label: 'NPS',
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-      </svg>
-    ),
-  },
-  {
-    label: 'Fixed Deposit',
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
-        <path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M9 8h6a2 2 0 0 1 0 4H9zM9 12h7a2 2 0 0 1 0 4H9z"/>
+        <path d="M6 6h1v12H6z"/>
+        <path d="M11 6v2M11 16v2M14 6v2M14 16v2"/>
       </svg>
     ),
   },
 ];
 
-const FEATURES = [
-  {
-    title: 'Track All Investments',
-    desc: 'One dashboard for stocks, MF, FDs — see everything at a glance.',
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
-      </svg>
-    ),
-  },
-  {
-    title: 'Track Your Net Worth',
-    desc: 'Real-time net worth across all assets, savings and liabilities.',
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-        <path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
-      </svg>
-    ),
-  },
-  {
-    title: 'Family Accounts',
-    desc: 'Manage investments for your entire family under one login.',
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
-        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-      </svg>
-    ),
-  },
-];
+
 
 const AppPromo = () => (
   <section className={styles.section}>
@@ -166,48 +122,7 @@ const AppPromo = () => (
       </div>
     </div>
 
-    {/* ── 2. Invest Categories ── */}
-    <div className={styles.investSection}>
-      <div className="container">
-        <p className={styles.eyebrow}>ALL IN ONE PLATFORM</p>
-        <h2 className={styles.sectionTitle}>Diversify and Invest Across</h2>
-        <div className={styles.categoryGrid}>
-          {INVEST_CATEGORIES.map(cat => (
-            <div key={cat.label} className={styles.categoryCard}>
-              <div className={styles.categoryIcon}>{cat.icon}</div>
-              <span className={styles.categoryLabel}>{cat.label}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-
-    {/* ── 3. Features ── */}
-    <div className={styles.featuresSection}>
-      <div className="container">
-        <p className={styles.eyebrow}>WHY CHOOSE 5TRADE</p>
-        <h2 className={styles.sectionTitle}>More Than an Investing App</h2>
-        <p className={styles.sectionSub}>Your complete money operating system</p>
-        <div className={styles.featureList}>
-          {FEATURES.map((f, i) => (
-            <div key={f.title} className={styles.featureItem}>
-              <div className={styles.featureIconWrap}>{f.icon}</div>
-              <div>
-                <div className={styles.featureTitle}>{f.title}</div>
-                <div className={styles.featureDesc}>{f.desc}</div>
-              </div>
-              <div className={styles.featureArrow}>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" strokeWidth="2" strokeLinecap="round">
-                  <path d="M9 18l6-6-6-6"/>
-                </svg>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-
-    {/* ── 4. Download CTA ── */}
+    {/* ── 2. Download CTA ── */}
     <div className={styles.downloadSection}>
       <div className="container">
         <div className={styles.downloadInner}>
@@ -232,6 +147,22 @@ const AppPromo = () => (
               </div>
             </a>
           </div>
+        </div>
+      </div>
+    </div>
+
+    {/* ── 3. Invest Categories ── */}
+    <div className={styles.investSection}>
+      <div className="container">
+        <p className={styles.eyebrow}>ALL IN ONE PLATFORM</p>
+        <h2 className={styles.sectionTitle}>Diversify and Invest Across</h2>
+        <div className={styles.categoryGrid}>
+          {INVEST_CATEGORIES.map(cat => (
+            <div key={cat.label} className={styles.categoryCard}>
+              <div className={styles.categoryIcon}>{cat.icon}</div>
+              <span className={styles.categoryLabel}>{cat.label}</span>
+            </div>
+          ))}
         </div>
       </div>
     </div>
