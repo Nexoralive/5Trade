@@ -116,7 +116,7 @@ const AppPromo = () => (
           <div className={styles.ratingCard}>
             <div className={styles.statIcon}><Icons.Users /></div>
             <div className={styles.ratingNum}>20 L+</div>
-            <div className={styles.ratingStore}><span>Investors</span></div>
+            <div className={styles.ratingStore}><span>Traders</span></div>
           </div>
         </div>
       </div>

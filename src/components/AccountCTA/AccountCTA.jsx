@@ -17,7 +17,7 @@ const AccountCTA = () => {
         <div className={styles.ctaContainer}>
           <div className={styles.textContent}>
             <h2 className={styles.heading}>
-              Open Your Free Investment Account in <span className={styles.highlight}>1 Minute.</span>
+              Open Your Free Trading Account in <span className={styles.highlight}>1 Minute.</span>
             </h2>
           </div>
           
